@@ -5,7 +5,6 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   use 'nvim-lua/plenary.nvim'
-  use 'neovim/nvim-lspconfig'
   use { 
     "ellisonleao/gruvbox.nvim",
     config = [[require('config.gruvbox')]]
@@ -22,4 +21,27 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+
+  use 'JuliaEditorSupport/julia-vim'
+  
+  -- LSP stuff habibi
+  use {
+    'neovim/nvim-lspconfig',
+    config = [[require('config.nvim-lspconfig')]]
+  }
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'L3MON4D3/LuaSnip'
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+        local saga = require("lspsaga")
+
+        saga.init_lsp_saga({
+            -- your configuration
+        })
+    end,
+})
 end)
