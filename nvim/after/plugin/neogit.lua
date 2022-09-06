@@ -1,4 +1,4 @@
-local map = require("lua.utils").map
+local map = require("utils").map
 local neogit = require("neogit")
 
 neogit.setup {}
