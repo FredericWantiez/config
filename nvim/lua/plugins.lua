@@ -43,5 +43,5 @@ return require('packer').startup(function()
           -- your configuration
       })
     end,
-})
+  })
 end)
