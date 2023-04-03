@@ -9,7 +9,7 @@ return require('packer').startup(function()
     "ellisonleao/gruvbox.nvim",
     config = [[require('config.gruvbox')]]
   }
-  use { "catppuccin/nvim", as = "catppuccin", config = [[require('config.catppuccin')]] }
+  --use { "catppuccin/nvim", as = "catppuccin", config = [[require('config.catppuccin')]] }
   use 'nvim-treesitter/nvim-treesitter'
   use {
     'nvim-lualine/lualine.nvim',
@@ -52,4 +52,10 @@ return require('packer').startup(function()
   }
 
   use('mbbill/undotree')
+
+  use {
+    "windwp/nvim-autopairs",
+    config = [[require('config.autopairs')]]
+  }
+
 end)

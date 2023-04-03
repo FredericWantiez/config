@@ -10,7 +10,7 @@ vim.wo.number = true
 vim.wo.cursorline = true
 
 autocmd({"BufWritePre"}, {
-    group = ThePrimeagenGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
+
