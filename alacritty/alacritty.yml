@@ -1,8 +1,8 @@
 font:
   normal:
-    family: FiraCode Nerd Font Mono
-    size: 14.5
-    use_thin_strokes: true
+    family: "FiraCode Nerd Font Mono"
+    #family: "JetBrains Nerd Font Mono"
+    AppleFontSmoothing: true
 
 live_config_reload: true
 
@@ -14,89 +14,84 @@ draw_bold_text_with_bright_colors: false
 key_bindings:
   - { key: Key3, mods: Alt, chars: "#" }
 
-# Colors (Gruvbox dark)
+env:
+  TERM: xterm-256color
+
 colors:
   primary:
-    # hard contrast background - '#1d2021'
-    background:        &gruvbox_dark_bg '#282828'
-    # soft contrast background - '#32302f'
-    foreground:        '#ebdbb2'
-    bright_foreground: '#fbf1c7'
-    dim_foreground:    '#a89984'
+    background: "#1E1E2E" # base
+    foreground: "#CDD6F4" # text
+    # Bright and dim foreground colors
+    dim_foreground: "#CDD6F4" # text
+    bright_foreground: "#CDD6F4" # text
+
+  # Cursor colors
   cursor:
-    text:   CellBackground
-    cursor: CellForeground
+    text: "#1E1E2E" # base
+    cursor: "#F5E0DC" # rosewater
   vi_mode_cursor:
-    text:   CellBackground
-    cursor: CellForeground
-  # search:
-  #   matches:
-  #     foreground: '#000000'
-  #     background: '#ffffff'
-  #   focused_match:
-  #    foreground: CellBackground
-  #    background: CellForeground
-  #   bar:
-  #     background: ''
-  #     foreground: ''
-  # line_indicator:
-  #   foreground: None
-  #   background: None
+    text: "#1E1E2E" # base
+    cursor: "#B4BEFE" # lavender
+
+  # Search colors
+  search:
+    matches:
+      foreground: "#1E1E2E" # base
+      background: "#A6ADC8" # subtext0
+    focused_match:
+      foreground: "#1E1E2E" # base
+      background: "#A6E3A1" # green
+    footer_bar:
+      foreground: "#1E1E2E" # base
+      background: "#A6ADC8" # subtext0
+
+  # Keyboard regex hints
+  hints:
+    start:
+      foreground: "#1E1E2E" # base
+      background: "#F9E2AF" # yellow
+    end:
+      foreground: "#1E1E2E" # base
+      background: "#A6ADC8" # subtext0
+
+  # Selection colors
   selection:
-    text:       CellBackground
-    background: CellForeground
-  bright:
-    black:   '#928374'
-    red:     '#fb4934'
-    green:   '#b8bb26'
-    yellow:  '#fabd2f'
-    blue:    '#83a598'
-    magenta: '#d3869b'
-    cyan:    '#8ec07c'
-    white:   '#ebdbb2'
+    text: "#1E1E2E" # base
+    background: "#F5E0DC" # rosewater
+
+  # Normal colors
   normal:
-    black:   *gruvbox_dark_bg
-    red:     '#cc241d'
-    green:   '#98971a'
-    yellow:  '#d79921'
-    blue:    '#458588'
-    magenta: '#b16286'
-    cyan:    '#689d6a'
-    white:   '#a89984'
+    black: "#45475A" # surface1
+    red: "#F38BA8" # red
+    green: "#A6E3A1" # green
+    yellow: "#F9E2AF" # yellow
+    blue: "#89B4FA" # blue
+    magenta: "#F5C2E7" # pink
+    cyan: "#94E2D5" # teal
+    white: "#BAC2DE" # subtext1
+
+  # Bright colors
+  bright:
+    black: "#585B70" # surface2
+    red: "#F38BA8" # red
+    green: "#A6E3A1" # green
+    yellow: "#F9E2AF" # yellow
+    blue: "#89B4FA" # blue
+    magenta: "#F5C2E7" # pink
+    cyan: "#94E2D5" # teal
+    white: "#A6ADC8" # subtext0
+
+  # Dim colors
   dim:
-    black:   '#32302f'
-    red:     '#9d0006'
-    green:   '#79740e'
-    yellow:  '#b57614'
-    blue:    '#076678'
-    magenta: '#8f3f71'
-    cyan:    '#427b58'
-    white:   '#928374'
+    black: "#45475A" # surface1
+    red: "#F38BA8" # red
+    green: "#A6E3A1" # green
+    yellow: "#F9E2AF" # yellow
+    blue: "#89B4FA" # blue
+    magenta: "#F5C2E7" # pink
+    cyan: "#94E2D5" # teal
+    white: "#BAC2DE" # subtext1
+
   indexed_colors:
-    - { index:  66, color: '#a89984' }
-    - { index:  72, color: '#689d6a' }
-    - { index: 106, color: '#98971a' }
-    - { index: 108, color: '#8ec07c' }
-    - { index: 109, color: '#83a598' }
-    - { index: 124, color: '#cc241d' }
-    - { index: 132, color: '#b16286' }
-    - { index: 142, color: '#b8bb26' }
-    - { index: 166, color: '#d65d0e' }
-    - { index: 167, color: '#fb4934' }
-    - { index: 172, color: '#d79921' }
-    - { index: 175, color: '#d3869b' }
-    - { index: 208, color: '#fe8019' }
-    - { index: 214, color: '#fabd2f' }
-    - { index: 223, color: '#ebdbb2' }
-    - { index: 229, color: '#fbf1c7' }
-    - { index: 234, color: '#1d2021' }
-    - { index: 235, color: '#282828' }
-    - { index: 236, color: '#32302f' }
-    - { index: 237, color: '#3c3836' }
-    - { index: 239, color: '#504945' }
-    - { index: 241, color: '#665c54' }
-    - { index: 243, color: '#7c6f64' }
-    - { index: 245, color: '#928374' }
-    - { index: 246, color: '#a89984' }
-    - { index: 248, color: '#bdae93' }
-    - { index: 250, color: '#d5c4a1' }
+    - { index: 16, color: "#FAB387" }
+    - { index: 17, color: "#F5E0DC" }

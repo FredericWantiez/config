@@ -5,11 +5,11 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   use 'nvim-lua/plenary.nvim'
-  use {
-    "ellisonleao/gruvbox.nvim",
-    config = [[require('config.gruvbox')]]
-  }
-  --use { "catppuccin/nvim", as = "catppuccin", config = [[require('config.catppuccin')]] }
+  --use {
+  --  "ellisonleao/gruvbox.nvim",
+  --  config = [[require('config.gruvbox')]]
+  --}
+  use { "catppuccin/nvim", as = "catppuccin", config = [[require('config.catppuccin')]] }
   use 'nvim-treesitter/nvim-treesitter'
   use {
     'nvim-lualine/lualine.nvim',
@@ -57,5 +57,7 @@ return require('packer').startup(function()
     "windwp/nvim-autopairs",
     config = [[require('config.autopairs')]]
   }
+
+  use 'folke/tokyonight.nvim'
 
 end)
